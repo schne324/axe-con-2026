@@ -8,8 +8,8 @@
 | Issue                                                                 | Location                 | Act                           | Tool           |
 | --------------------------------------------------------------------- | ------------------------ | ----------------------------- | -------------- |
 | Hero banner `<img>` — no `alt` attribute                              | `HeroBanner.tsx`         | Act 1: Axe Linter             | axe Linter     |
-| Navbar search `IconButton` — no accessible name (show axe-linter.yml) | `Navbar.tsx`             | Act 1: Axe Linter             | axe Linter     |
-| Promo code raw `<input>` — no label/aria                              | `BookingForm.tsx`        | Act 1: Axe Linter             | axe Linter     |
+| Navbar search icon button — no accessible name                        | `Navbar.tsx`             | Act 1: Axe Linter             | axe Linter     |
+| "New Deals" link — `aria-hidden` on inner span                        | `Navbar.tsx`             | Act 1: Axe Linter             | axe Linter     |
 | From/To/Departure `<TextInput>` — no `label` prop                     | `BookingForm.tsx`        | Act 2: Axe MCP Server         | axe MCP Server |
 | Helper text `#9ca3af` — contrast failure                              | `BookingForm.tsx`        | Act 2: Axe MCP Server         | axe MCP Server |
 | Clear form `IconButton` — no accessible name                          | `BookingForm.tsx`        | Act 2: Axe MCP Server         | axe MCP Server |

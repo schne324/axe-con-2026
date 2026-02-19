@@ -83,7 +83,7 @@ const TrainIcon = () => (
   </svg>
 );
 
-const SearchIcon = () => (
+const SearchIcon = ({ label }: { label?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 20 20"
@@ -94,6 +94,7 @@ const SearchIcon = () => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
+    aria-label={label}
   >
     <circle cx="8.5" cy="8.5" r="5.5" />
     <line x1="13" y1="13" x2="18" y2="18" />
@@ -110,13 +111,28 @@ export default function Navbar() {
         </span>
       </a>
 
-      <div className="flex items-center gap-1 bg-white/10 rounded-lg px-3 py-1.5">
-        <input
-          type="text"
-          aria-label="{LABEL TEXT HERE}"
-          className="bg-transparent text-white placeholder-white/60 text-sm outline-none w-48"
-        />
-        <IconButton icon={<SearchIcon />} />
+      <div className="flex items-center gap-3">
+        {/* New Deals link — aria-hidden on inner span means anchor has no accessible name (intentional) */}
+        <a
+          href="#"
+          className="text-white text-sm font-medium px-4 py-1.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+        >
+          <span aria-hidden="true">New Deals</span>
+        </a>
+
+        <div className="flex items-center gap-1 bg-white/10 rounded-lg px-3 py-1.5">
+          <input
+            type="text"
+            aria-label="{LABEL TEXT HERE}"
+            className="bg-transparent text-white placeholder-white/60 text-sm outline-none w-48"
+          />
+          <button
+            type="button"
+            className="flex items-center justify-center p-2 rounded-lg hover:bg-white/10 transition-colors"
+          >
+            <SearchIcon />
+          </button>
+        </div>
       </div>
     </nav>
   );

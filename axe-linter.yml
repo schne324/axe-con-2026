@@ -1,3 +1,5 @@
 global-components:
-  SearchIcon: svg
-  IconButton: button
+  SearchIcon:
+    element: img
+    attributes:
+      - label: aria-label
