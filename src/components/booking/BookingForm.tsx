@@ -1,7 +1,6 @@
 import { useState } from "react";
 import TextInput from "../shared/TextInput";
-import PassengerCounter from "../shared/PassengerCounter";
-import IconButton from "../shared/IconButton";
+// import PassengerCounter from "../shared/PassengerCounter";
 
 const ResetIcon = () => (
   <svg
@@ -112,29 +111,18 @@ export default function BookingForm() {
 
         {/* Travelers section */}
         <div>
-          <p className="text-sm font-medium text-gray-700 mb-2">Travelers</p>
-          <div className="border border-gray-200 rounded-xl px-4">
-            <PassengerCounter
-              label="Adults"
-              count={adults}
-              onIncrease={() => setAdults((n) => n + 1)}
-              onDecrease={() => setAdults((n) => Math.max(0, n - 1))}
-            />
-            <PassengerCounter
-              label="Children"
-              count={children}
-              onIncrease={() => setChildren((n) => n + 1)}
-              onDecrease={() => setChildren((n) => Math.max(0, n - 1))}
-            />
-          </div>
+          {/* <p className="text-sm font-medium text-gray-700 mb-2">Travelers</p> */}
+          <div className="border border-gray-200 rounded-xl px-4"></div>
         </div>
 
         <div className="flex items-center gap-3 mt-4">
-          <IconButton
-            icon={<ResetIcon />}
+          <button
+            type="button"
             onClick={handleClear}
             className="flex items-center justify-center py-3 px-4 rounded-lg border-2 border-gray-300 text-[#1a2e4a] hover:bg-[#1a2e4a]/5 transition-colors"
-          />
+          >
+            <ResetIcon />
+          </button>
 
           <div
             className="bg-[#1a2e4a] text-white py-3 px-6 rounded-lg cursor-pointer text-center font-semibold flex-1"
