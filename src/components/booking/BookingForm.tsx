@@ -52,13 +52,11 @@ export default function BookingForm() {
 
   return (
     <div className="bg-white rounded-2xl shadow-lg p-8">
-      {/* "Plan Your Trip" heading — div styled as h2, no heading element or role (intentional) */}
       <div className="text-2xl font-bold text-gray-900 mb-6">
         Plan Your Trip
       </div>
 
       <div className="flex flex-col gap-4">
-        {/* From / To — unassociated labels, no htmlFor (intentional) */}
         <div className="grid grid-cols-2 gap-3">
           <div className="flex flex-col gap-1">
             <label className="text-sm font-medium text-gray-700">From</label>
@@ -82,7 +80,6 @@ export default function BookingForm() {
           </div>
         </div>
 
-        {/* Departure date — unassociated label, no htmlFor (intentional) */}
         <div>
           <label className="text-sm font-medium text-gray-700">
             Departure Date
@@ -94,13 +91,11 @@ export default function BookingForm() {
             value={departure}
             onChange={(e) => setDeparture(e.target.value)}
           />
-          {/* Color contrast failure — #9ca3af on white (intentional) */}
           <p className="text-[#9ca3af] text-sm mt-1">
             Flexible dates may offer lower fares
           </p>
         </div>
 
-        {/* Promo code — unassociated label (no htmlFor), focus ring suppressed (intentional) */}
         <div className="flex flex-col gap-1">
           <label className="text-sm font-medium text-gray-700">
             Promo Code
@@ -111,7 +106,7 @@ export default function BookingForm() {
             placeholder="Promo code"
             value={promoCode}
             onChange={(e) => setPromoCode(e.target.value)}
-            className="border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-900 bg-white w-full outline-none focus:outline-none"
+            className="border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-900 bg-white w-full"
           />
         </div>
 
@@ -134,16 +129,13 @@ export default function BookingForm() {
           </div>
         </div>
 
-        {/* Bottom row: reset icon button (no accessible name, intentional) + submit */}
         <div className="flex items-center gap-3 mt-4">
-          {/* Reset form icon button — no accessible name (intentional) */}
           <IconButton
             icon={<ResetIcon />}
             onClick={handleClear}
             className="flex items-center justify-center py-3 px-4 rounded-lg border-2 border-gray-300 text-[#1a2e4a] hover:bg-[#1a2e4a]/5 transition-colors"
           />
 
-          {/* Submit — div masquerading as button, no role, no tabIndex, no keyboard handler (intentional) */}
           <div
             className="bg-[#1a2e4a] text-white py-3 px-6 rounded-lg cursor-pointer text-center font-semibold flex-1"
             onClick={() => console.log("form submitted", formState)}

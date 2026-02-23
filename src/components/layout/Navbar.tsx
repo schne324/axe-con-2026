@@ -1,5 +1,3 @@
-import IconButton from "../shared/IconButton";
-
 const TrainIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +102,7 @@ const SearchIcon = ({ label }: { label?: string }) => (
 export default function Navbar() {
   return (
     <nav className="bg-[#1a2e4a] text-white px-6 py-3 flex items-center justify-between">
-      <a href="#" className="flex items-center gap-2 text-white no-underline">
+      <a href="#" className="flex items-center gap-2 text-white no-underline outline-none focus:outline-none">
         <TrainIcon />
         <span className="text-lg font-semibold tracking-wide">
           CJ Railway Co.
@@ -115,7 +113,7 @@ export default function Navbar() {
         {/* New Deals link — aria-hidden on inner span means anchor has no accessible name (intentional) */}
         <a
           href="#"
-          className="text-white text-sm font-medium px-4 py-1.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+          className="text-white text-sm font-medium px-4 py-1.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors outline-none focus:outline-none"
         >
           <span aria-hidden="true">New Deals</span>
         </a>

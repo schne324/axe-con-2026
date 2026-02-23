@@ -32,7 +32,7 @@ export default function PassengerCounter({
           type="button"
           aria-label="Increase"
           onClick={onIncrease}
-          className="w-8 h-8 rounded-full border border-gray-400 flex items-center justify-center text-gray-600 hover:border-gray-700 hover:text-gray-900 transition-colors text-lg leading-none outline-none focus:outline-none"
+          className="w-8 h-8 rounded-full border border-gray-400 flex items-center justify-center text-gray-600 hover:border-gray-700 hover:text-gray-900 transition-colors text-lg leading-none"
         >
           +
         </button>
