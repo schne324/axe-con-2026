@@ -57,6 +57,51 @@
 - **Punchline:** _"Ticket done. AC met. I could push this right now..."_
 - **Beat.** _"...but let's not."_
 
+<details>
+
+  <summary>Actual code changes to make...</summary>
+
+## LIVE CODING CHEAT SHEET
+
+> Keep this section visible on your second monitor during the live coding segment.
+
+### 1. State — add to top of `BookingForm.tsx`
+
+```tsx
+const [adults, setAdults] = useState(1);
+const [children, setChildren] = useState(0);
+```
+
+### 2. Import — make sure `PassengerCounter` is imported
+
+```tsx
+import PassengerCounter from "../shared/PassengerCounter";
+```
+
+### 3. JSX — drop into the form after the Departure Date field
+
+```tsx
+<div>
+  <p className="text-sm font-medium text-gray-700 mb-2">Travelers</p>
+  <div className="border border-gray-200 rounded-xl px-4">
+    <PassengerCounter
+      label="Adults"
+      count={adults}
+      onIncrease={() => setAdults((n) => n + 1)}
+      onDecrease={() => setAdults((n) => Math.max(1, n - 1))}
+    />
+    <PassengerCounter
+      label="Children"
+      count={children}
+      onIncrease={() => setChildren((n) => n + 1)}
+      onDecrease={() => setChildren((n) => Math.max(0, n - 1))}
+    />
+  </div>
+</div>
+```
+
+</details>
+
 ---
 
 ## ACT 2: Axe MCP Server — "The Code-Time Copilot"
@@ -141,47 +186,6 @@
 - Premium: axe MCP Server, axe DevTools advanced rules + IGT
 - **Final punchline:** _"Shift left without shifting gears. Leave your troubles — and your accessibility debt — behind."_
 - Questions
-
----
-
-## LIVE CODING CHEAT SHEET
-
-> Keep this section visible on your second monitor during the live coding segment.
-
-### 1. State — add to top of `BookingForm.tsx`
-
-```tsx
-const [adults, setAdults] = useState(1);
-const [children, setChildren] = useState(0);
-```
-
-### 2. Import — make sure `PassengerCounter` is imported
-
-```tsx
-import PassengerCounter from "../shared/PassengerCounter";
-```
-
-### 3. JSX — drop into the form after the Departure Date field
-
-```tsx
-<div>
-  <p className="text-sm font-medium text-gray-700 mb-2">Travelers</p>
-  <div className="border border-gray-200 rounded-xl px-4">
-    <PassengerCounter
-      label="Adults"
-      count={adults}
-      onIncrease={() => setAdults((n) => n + 1)}
-      onDecrease={() => setAdults((n) => Math.max(1, n - 1))}
-    />
-    <PassengerCounter
-      label="Children"
-      count={children}
-      onIncrease={() => setChildren((n) => n + 1)}
-      onDecrease={() => setChildren((n) => Math.max(0, n - 1))}
-    />
-  </div>
-</div>
-```
 
 ---
 
