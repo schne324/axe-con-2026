@@ -6,7 +6,6 @@
 
 - Bio, role at Deque, accessibility meetup
 - Quick agenda overview
-- **Punchline:** _"Casey Jones was famous for always arriving on time. Today we're going to make sure our app doesn't leave anyone behind."_
 
 ---
 
@@ -17,6 +16,7 @@
 - Quick tour of Casey Jones Railway Co. in the browser
   - Booking form, navbar, hero banner — looks like a real app
 - Quick tech stack slide: Vite + React + TS + Tailwind, local shared components
+- **Punchline:** _"Casey Jones was famous for always arriving on time. Today we're going to make sure our app doesn't leave anyone behind."_
 
 ---
 
