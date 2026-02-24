@@ -1,6 +1,5 @@
 import { useState } from "react";
 import TextInput from "../shared/TextInput";
-// import PassengerCounter from "../shared/PassengerCounter";
 
 const ResetIcon = () => (
   <svg
