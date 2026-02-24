@@ -1,0 +1,250 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c5282;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#4a90d9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c8dff5;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="mountainFar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5a7fa8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7a9fbe;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="mountainNear" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3d6e4e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d5a3d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="groundGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a7c59;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d4a35;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="trainGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#c0392b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#922b21;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="smokeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2e4a;stop-opacity:0.65" />
+      <stop offset="100%" style="stop-color:#0d1e33;stop-opacity:0.55" />
+    </linearGradient>
+    <filter id="smokePuff" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+    </filter>
+    <filter id="textShadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.5" />
+    </filter>
+    <clipPath id="bannerClip">
+      <rect width="1200" height="400" />
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#bannerClip)">
+    <!-- Sky -->
+    <rect width="1200" height="400" fill="url(#skyGrad)" />
+
+    <!-- Sun -->
+    <circle cx="980" cy="80" r="48" fill="#f6e05e" opacity="0.85" />
+    <circle cx="980" cy="80" r="60" fill="#f6e05e" opacity="0.18" />
+
+    <!-- Clouds -->
+    <g opacity="0.82">
+      <ellipse cx="150" cy="90" rx="70" ry="28" fill="white" />
+      <ellipse cx="110" cy="98" rx="45" ry="22" fill="white" />
+      <ellipse cx="195" cy="98" rx="50" ry="22" fill="white" />
+    </g>
+    <g opacity="0.7">
+      <ellipse cx="420" cy="65" rx="55" ry="22" fill="white" />
+      <ellipse cx="385" cy="72" rx="38" ry="18" fill="white" />
+      <ellipse cx="460" cy="72" rx="40" ry="18" fill="white" />
+    </g>
+    <g opacity="0.6">
+      <ellipse cx="720" cy="55" rx="80" ry="26" fill="white" />
+      <ellipse cx="665" cy="65" rx="52" ry="20" fill="white" />
+      <ellipse cx="780" cy="65" rx="55" ry="20" fill="white" />
+    </g>
+
+    <!-- Far mountains -->
+    <polygon points="0,280 100,160 180,240 260,140 350,230 430,120 510,210 590,130 670,220 750,100 830,200 920,110 1000,200 1100,130 1200,190 1200,310 0,310" fill="url(#mountainFar)" opacity="0.75" />
+    <!-- Snow caps -->
+    <polygon points="260,140 280,165 240,165" fill="white" opacity="0.6" />
+    <polygon points="430,120 452,148 408,148" fill="white" opacity="0.6" />
+    <polygon points="750,100 774,132 726,132" fill="white" opacity="0.6" />
+    <polygon points="920,110 944,140 896,140" fill="white" opacity="0.55" />
+
+    <!-- Near hills/rolling landscape -->
+    <path d="M0,300 Q120,240 250,270 Q400,220 550,265 Q700,220 850,260 Q1000,215 1150,250 L1200,255 L1200,400 L0,400Z" fill="url(#mountainNear)" />
+
+    <!-- Ground / foreground -->
+    <path d="M0,340 Q200,320 400,335 Q600,320 800,338 Q1000,322 1200,335 L1200,400 L0,400Z" fill="url(#groundGrad)" />
+
+    <!-- Railroad ties (perspective) -->
+    <g stroke="#4a3728" stroke-width="3" opacity="0.7">
+      <!-- Rails -->
+      <line x1="430" y1="370" x2="560" y2="340" stroke="#8a7560" stroke-width="4" />
+      <line x1="510" y1="370" x2="630" y2="340" stroke="#8a7560" stroke-width="4" />
+      <!-- Ties -->
+      <line x1="432" y1="370" x2="514" y2="370" stroke="#5a3e28" stroke-width="5" />
+      <line x1="447" y1="366" x2="526" y2="366" stroke="#5a3e28" stroke-width="4" />
+      <line x1="462" y1="362" x2="538" y2="362" stroke="#5a3e28" stroke-width="4" />
+      <line x1="477" y1="358" x2="550" y2="358" stroke="#5a3e28" stroke-width="3.5" />
+      <line x1="490" y1="354" x2="560" y2="354" stroke="#5a3e28" stroke-width="3.5" />
+      <line x1="504" y1="350" x2="571" y2="350" stroke="#5a3e28" stroke-width="3" />
+      <line x1="516" y1="347" x2="581" y2="347" stroke="#5a3e28" stroke-width="3" />
+      <line x1="528" y1="344" x2="590" y2="344" stroke="#5a3e28" stroke-width="3" />
+      <line x1="540" y1="341" x2="599" y2="341" stroke="#5a3e28" stroke-width="2.5" />
+    </g>
+
+    <!-- Locomotive -->
+    <g transform="translate(60, 295)">
+      <!-- Tender car -->
+      <rect x="0" y="30" width="90" height="45" rx="4" fill="#1a2e4a" />
+      <rect x="5" y="35" width="80" height="35" rx="3" fill="#243d60" />
+      <!-- Coal load -->
+      <ellipse cx="45" cy="37" rx="38" ry="10" fill="#2d2d2d" />
+
+      <!-- Main locomotive body -->
+      <rect x="88" y="25" width="170" height="50" rx="5" fill="url(#trainGrad)" />
+      <!-- Boiler dome -->
+      <ellipse cx="215" cy="25" rx="18" ry="12" fill="#d44" />
+      <!-- Steam dome -->
+      <ellipse cx="245" cy="22" rx="12" ry="10" fill="#c0392b" />
+      <!-- Smokestack -->
+      <rect x="228" y="2" width="14" height="24" rx="3" fill="#222" />
+      <rect x="224" y="0" width="22" height="6" rx="2" fill="#333" />
+
+      <!-- Smoke puffs -->
+      <circle cx="235" cy="-12" r="14" fill="#ddd" opacity="0.5" filter="url(#smokePuff)" />
+      <circle cx="248" cy="-22" r="18" fill="#ccc" opacity="0.4" filter="url(#smokePuff)" />
+      <circle cx="258" cy="-35" r="22" fill="#bbb" opacity="0.3" filter="url(#smokePuff)" />
+      <circle cx="272" cy="-46" r="26" fill="#aaa" opacity="0.2" filter="url(#smokePuff)" />
+
+      <!-- Cab -->
+      <rect x="90" y="10" width="55" height="65" rx="4" fill="#b03020" />
+      <rect x="95" y="15" width="22" height="18" rx="2" fill="#7ec8e3" opacity="0.7" />
+      <rect x="120" y="15" width="18" height="18" rx="2" fill="#7ec8e3" opacity="0.7" />
+
+      <!-- Running boards / details -->
+      <rect x="88" y="68" width="170" height="6" rx="2" fill="#8B2020" />
+      <rect x="258" y="55" width="30" height="20" rx="2" fill="#1a2e4a" />
+
+      <!-- Cowcatcher -->
+      <polygon points="258,55 258,75 285,75 285,70" fill="#555" />
+
+      <!-- Wheels -->
+      <!-- Drive wheels (large) -->
+      <circle cx="120" cy="78" r="22" fill="#222" stroke="#888" stroke-width="3" />
+      <circle cx="120" cy="78" r="14" fill="#333" />
+      <circle cx="120" cy="78" r="4" fill="#999" />
+
+      <circle cx="175" cy="78" r="22" fill="#222" stroke="#888" stroke-width="3" />
+      <circle cx="175" cy="78" r="14" fill="#333" />
+      <circle cx="175" cy="78" r="4" fill="#999" />
+
+      <circle cx="228" cy="78" r="22" fill="#222" stroke="#888" stroke-width="3" />
+      <circle cx="228" cy="78" r="14" fill="#333" />
+      <circle cx="228" cy="78" r="4" fill="#999" />
+
+      <!-- Pilot wheels (small) -->
+      <circle cx="263" cy="78" r="13" fill="#222" stroke="#888" stroke-width="2" />
+      <circle cx="263" cy="78" r="8" fill="#333" />
+
+      <!-- Leading wheels (tender) -->
+      <circle cx="22" cy="78" r="14" fill="#222" stroke="#888" stroke-width="2" />
+      <circle cx="22" cy="78" r="9" fill="#333" />
+      <circle cx="68" cy="78" r="14" fill="#222" stroke="#888" stroke-width="2" />
+      <circle cx="68" cy="78" r="9" fill="#333" />
+
+      <!-- Connecting rods -->
+      <line x1="120" y1="78" x2="175" y2="78" stroke="#888" stroke-width="4" />
+      <line x1="175" y1="78" x2="228" y2="78" stroke="#888" stroke-width="4" />
+
+      <!-- Headlight -->
+      <circle cx="275" cy="48" r="8" fill="#f6e05e" opacity="0.9" />
+      <circle cx="275" cy="48" r="5" fill="white" opacity="0.8" />
+
+      <!-- Rail (ground line) -->
+      <rect x="-20" y="92" width="320" height="4" rx="1" fill="#8a7560" />
+      <rect x="-20" y="96" width="320" height="2" rx="1" fill="#8a7560" />
+    </g>
+
+    <!-- Trees (right side) -->
+    <g fill="#2d5a3d">
+      <polygon points="850,290 870,240 890,290" />
+      <polygon points="845,300 870,245 895,300" />
+      <rect x="866" y="296" width="8" height="18" fill="#3d2b1a" />
+    </g>
+    <g fill="#1e4d2e">
+      <polygon points="900,285 918,238 936,285" />
+      <polygon points="897,295 918,242 939,295" />
+      <rect x="914" y="291" width="8" height="18" fill="#3d2b1a" />
+    </g>
+    <g fill="#2d5a3d">
+      <polygon points="950,292 965,250 980,292" />
+      <polygon points="947,300 965,253 983,300" />
+      <rect x="961" y="297" width="7" height="14" fill="#3d2b1a" />
+    </g>
+    <g fill="#1e4d2e">
+      <polygon points="1010,288 1028,242 1046,288" />
+      <polygon points="1007,298 1028,246 1049,298" />
+      <rect x="1023" y="294" width="9" height="16" fill="#3d2b1a" />
+    </g>
+    <g fill="#2d5a3d">
+      <polygon points="1070,285 1090,236 1110,285" />
+      <polygon points="1066,296 1090,240 1114,296" />
+      <rect x="1085" y="292" width="10" height="18" fill="#3d2b1a" />
+    </g>
+    <g fill="#1e4d2e">
+      <polygon points="1130,290 1148,245 1166,290" />
+      <polygon points="1127,300 1148,248 1169,300" />
+      <rect x="1143" y="296" width="9" height="16" fill="#3d2b1a" />
+    </g>
+
+    <!-- Text backdrop panel (slightly worn/vintage feel) -->
+    <rect x="340" y="100" width="560" height="160" rx="8" fill="url(#smokeBg)" />
+    <rect x="344" y="104" width="552" height="152" rx="6" fill="none" stroke="#c0a060" stroke-width="1.5" opacity="0.5" />
+
+    <!-- Decorative rule lines above and below text -->
+    <line x1="375" y1="128" x2="825" y2="128" stroke="#c0a060" stroke-width="1" opacity="0.5" />
+    <line x1="375" y1="220" x2="825" y2="220" stroke="#c0a060" stroke-width="1" opacity="0.5" />
+
+    <!-- Main heading text -->
+    <text
+      x="620"
+      y="185"
+      text-anchor="middle"
+      font-family="Georgia, 'Times New Roman', serif"
+      font-size="68"
+      font-weight="bold"
+      letter-spacing="3"
+      fill="#f5e6c8"
+      filter="url(#textShadow)"
+    >Book Your Journey</text>
+
+    <!-- Tagline text -->
+    <text
+      x="620"
+      y="215"
+      text-anchor="middle"
+      font-family="Georgia, 'Times New Roman', serif"
+      font-size="18"
+      font-style="italic"
+      letter-spacing="5"
+      fill="#c8a86e"
+      opacity="0.9"
+    >Casey Jones Railway Co.</text>
+
+    <!-- Ornamental asterisk / flourish -->
+    <text x="370" y="182" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#c0a060" opacity="0.7">✦</text>
+    <text x="870" y="182" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#c0a060" opacity="0.7">✦</text>
+
+    <!-- Tagline below banner area -->
+    <text
+      x="620"
+      y="242"
+      text-anchor="middle"
+      font-family="Georgia, 'Times New Roman', serif"
+      font-size="13"
+      letter-spacing="6"
+      fill="#a8c8e8"
+      opacity="0.75"
+    >LEAVE YOUR TROUBLES BEHIND</text>
+  </g>
+</svg>
