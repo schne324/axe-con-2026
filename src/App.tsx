@@ -8,6 +8,7 @@ export default function App() {
       <Navbar />
       <HeroBanner />
       <main className="max-w-2xl mx-auto py-10 px-4">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">Casey Jones Railway Co.</h1>
         <BookingForm />
       </main>
     </>

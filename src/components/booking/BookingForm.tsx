@@ -50,12 +50,17 @@ export default function BookingForm() {
   }
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-8">
-      <div className="text-2xl font-bold text-gray-900 mb-6">
-        Plan Your Trip
+    <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+      <div className="bg-gradient-to-br from-[#1a2e4a]/20 to-transparent px-8 pt-8 pb-6">
+        <div className="text-2xl font-bold text-gray-900 mb-2">
+          Plan Your Trip
+        </div>
+        <p className="text-gray-500 text-sm">
+          Enter the below details to book your trip today!
+        </p>
       </div>
 
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 px-8 pb-8 mt-6">
         <div className="grid grid-cols-2 gap-3">
           <div className="flex flex-col gap-1">
             <label className="text-sm font-medium text-gray-700">From</label>
