@@ -23,7 +23,7 @@
       ],
       "env": {
         "AXE_API_KEY": "${input:axe-api-key}",
-        "AXE_SERVER_URL": "https://axe.dequelabs.com"
+        "AXE_SERVER_URL": "https://axe.deque.com"
       }
     }
   }

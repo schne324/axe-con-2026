@@ -84,20 +84,6 @@ function formatTripDate(iso: string): string {
   });
 }
 
-const MoreIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    width="18"
-    height="18"
-    fill="currentColor"
-  >
-    <circle cx="5" cy="12" r="2" />
-    <circle cx="12" cy="12" r="2" />
-    <circle cx="19" cy="12" r="2" />
-  </svg>
-);
-
 const StarIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -172,10 +158,8 @@ export default function ProfilePage() {
               </h2>
 
               <div className="flex items-center gap-2">
-                {/* AXE: aria-allowed-attr — aria-checked is not allowed on role=button */}
                 <button
                   type="button"
-                  aria-checked="true"
                   className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-[#fef3c7] text-[#92400e] hover:bg-[#fde68a] transition-colors"
                 >
                   <StarIcon />
@@ -220,19 +204,10 @@ export default function ProfilePage() {
                             {trip.from} <span aria-hidden="true">→</span>{" "}
                             {trip.to}
                           </p>
-                          {/* AXE: color-contrast — text-gray-300 on white is ~1.6:1 */}
-                          <p className="text-xs text-gray-300 mt-1">
+                          <p className="text-xs mt-1">
                             {formatTripDate(trip.date)} · {trip.departureTime}
                           </p>
                         </div>
-
-                        {/* AXE: button-name — icon-only button with no accessible name */}
-                        <button
-                          type="button"
-                          className="text-gray-500 hover:text-gray-900 p-1 rounded hover:bg-gray-100 transition-colors"
-                        >
-                          <MoreIcon />
-                        </button>
                       </div>
 
                       <div className="flex items-center justify-between mt-auto pt-2">
