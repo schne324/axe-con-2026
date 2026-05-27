@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="dn-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7fb3d4"/>
+      <stop offset="60%" stop-color="#cde4ee"/>
+      <stop offset="100%" stop-color="#f4eccf"/>
+    </linearGradient>
+    <linearGradient id="dn-far" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6b7fa3"/>
+      <stop offset="100%" stop-color="#9bb1cc"/>
+    </linearGradient>
+    <linearGradient id="dn-mid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3f546f"/>
+      <stop offset="100%" stop-color="#5f7491"/>
+    </linearGradient>
+    <linearGradient id="dn-near" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f2f3f"/>
+      <stop offset="100%" stop-color="#34465c"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#dn-sky)"/>
+  <circle cx="80" cy="60" r="24" fill="#fffaf0" opacity="0.9"/>
+  <circle cx="80" cy="60" r="40" fill="#fffaf0" opacity="0.15"/>
+  <g opacity="0.9">
+    <polygon points="-20,180 60,110 120,160 180,100 240,150 320,90 400,150 400,240 -20,240" fill="url(#dn-far)"/>
+    <polygon points="40,118 60,108 78,128" fill="#ffffff"/>
+    <polygon points="160,108 180,98 200,124" fill="#ffffff"/>
+    <polygon points="300,98 320,88 340,118" fill="#ffffff"/>
+  </g>
+  <g>
+    <polygon points="-20,210 40,150 90,180 150,130 210,170 270,120 340,170 400,140 400,240 -20,240" fill="url(#dn-mid)"/>
+    <polygon points="25,158 40,148 58,172" fill="#ffffff"/>
+    <polygon points="135,140 150,130 168,156" fill="#ffffff"/>
+    <polygon points="255,130 270,120 288,146" fill="#ffffff"/>
+    <polygon points="385,148 400,138 400,154" fill="#ffffff"/>
+  </g>
+  <g>
+    <polygon points="-20,240 60,180 130,210 200,150 280,200 360,170 400,200 400,240" fill="url(#dn-near)"/>
+    <polygon points="46,188 60,178 74,202" fill="#ffffff"/>
+    <polygon points="186,158 200,148 216,176" fill="#ffffff"/>
+    <polygon points="266,206 280,198 292,220" fill="#ffffff" opacity="0.7"/>
+  </g>
+  <g fill="#0d1622">
+    <polygon points="44,228 50,212 56,228"/>
+    <polygon points="60,232 66,214 72,232"/>
+    <polygon points="78,232 84,218 90,232"/>
+  </g>
+</svg>

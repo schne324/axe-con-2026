@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="pt-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c3d9d1"/>
+      <stop offset="55%" stop-color="#d7e0c4"/>
+      <stop offset="100%" stop-color="#e8d8a8"/>
+    </linearGradient>
+    <linearGradient id="pt-far-hills" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7b8b6a"/>
+      <stop offset="100%" stop-color="#a3b08a"/>
+    </linearGradient>
+    <linearGradient id="pt-mid-hills" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a5d3a"/>
+      <stop offset="100%" stop-color="#6e7f54"/>
+    </linearGradient>
+    <linearGradient id="pt-fog" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#pt-sky)"/>
+  <circle cx="330" cy="70" r="18" fill="#fff6e0" opacity="0.85"/>
+  <path d="M -20 150 Q 60 110 140 140 T 300 130 T 420 145 L 420 240 L -20 240 Z" fill="url(#pt-far-hills)"/>
+  <rect y="125" width="400" height="40" fill="url(#pt-fog)"/>
+  <path d="M -20 180 Q 80 150 180 170 T 360 160 T 420 175 L 420 240 L -20 240 Z" fill="url(#pt-mid-hills)"/>
+  <g fill="#1d2a1a">
+    <!-- back row of pines (smaller) -->
+    <g opacity="0.85">
+      <polygon points="20,200 30,165 40,200"/>
+      <polygon points="55,205 67,160 79,205"/>
+      <polygon points="95,200 105,170 115,200"/>
+      <polygon points="125,210 137,165 149,210"/>
+      <polygon points="170,205 180,170 190,205"/>
+      <polygon points="210,210 222,165 234,210"/>
+      <polygon points="250,205 260,170 270,205"/>
+      <polygon points="285,210 297,160 309,210"/>
+      <polygon points="325,205 335,170 345,205"/>
+      <polygon points="360,210 372,165 384,210"/>
+    </g>
+    <!-- front row of pines (bigger) -->
+    <polygon points="-10,240 8,170 26,240"/>
+    <polygon points="20,240 40,150 60,240"/>
+    <polygon points="58,240 76,170 94,240"/>
+    <polygon points="86,240 106,155 126,240"/>
+    <polygon points="118,240 138,165 158,240"/>
+    <polygon points="150,240 172,150 194,240"/>
+    <polygon points="186,240 204,170 222,240"/>
+    <polygon points="216,240 238,155 260,240"/>
+    <polygon points="252,240 270,170 288,240"/>
+    <polygon points="282,240 302,150 322,240"/>
+    <polygon points="316,240 334,170 352,240"/>
+    <polygon points="346,240 366,155 386,240"/>
+    <polygon points="380,240 398,170 410,240"/>
+  </g>
+</svg>

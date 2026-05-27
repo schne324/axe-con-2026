@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import UserMenu from "./UserMenu";
+
 const TrainIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -102,15 +105,15 @@ const SearchIcon = ({ label }: { label?: string }) => (
 export default function Navbar() {
   return (
     <nav className="bg-[#1a2e4a] text-white px-6 py-3 flex items-center justify-between">
-      <a
-        href="#"
+      <Link
+        to="/"
         className="flex items-center gap-2 text-white no-underline outline-none focus:outline-none"
       >
         <TrainIcon />
         <span className="text-lg font-semibold tracking-wide">
           CJ Railway Co.
         </span>
-      </a>
+      </Link>
 
       <div className="flex items-center gap-3">
         <a
@@ -133,6 +136,8 @@ export default function Navbar() {
             <SearchIcon />
           </button>
         </div>
+
+        <UserMenu />
       </div>
     </nav>
   );
