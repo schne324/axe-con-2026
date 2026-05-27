@@ -1,14 +1,20 @@
 import { useState, type FormEvent } from "react";
-import { useNavigate, useLocation, Link } from "react-router-dom";
+import { useNavigate, useSearchParams, Link } from "react-router-dom";
 import { useAuth } from "../auth/authContext";
 import TextInput from "../components/shared/TextInput";
 
-type LocationState = { from?: string } | null;
+function safeRedirectTarget(raw: string | null): string {
+  if (!raw) return "/";
+  // Only allow internal paths; reject protocol-relative URLs (//evil.com)
+  // and absolute URLs to prevent open-redirect.
+  if (!raw.startsWith("/") || raw.startsWith("//")) return "/";
+  return raw;
+}
 
 export default function LoginPage() {
   const { login } = useAuth();
   const navigate = useNavigate();
-  const location = useLocation();
+  const [searchParams] = useSearchParams();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
@@ -22,8 +28,8 @@ export default function LoginPage() {
     }
 
     login(trimmedEmail);
-    const from = (location.state as LocationState)?.from ?? "/";
-    navigate(from, { replace: true });
+    const target = safeRedirectTarget(searchParams.get("redirect_uri"));
+    navigate(target, { replace: true });
   }
 
   return (
