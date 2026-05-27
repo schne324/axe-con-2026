@@ -2,13 +2,13 @@
 
 ## MANDATORY WORKFLOW - DO NOT DEVIATE
 
-When working with accessibility issues, you MUST follow this exact workflow:
+**This workflow applies to ANY UI code generation or modification — not only when accessibility is explicitly requested.** Whenever you create, modify, or refactor user-facing UI (new components, new pages, edits to existing components), you MUST follow this exact workflow before considering the task complete:
 
 ### 1. Analysis Phase
 
 When asked to analyze pages for accessibility issues, you MUST:
 
-- Use the `mcp_axe-mcp-serve_analyze` tool to scan the page
+- Use the `mcp_axe-mcp-server_analyze` tool to scan the page
 - Do NOT manually identify accessibility issues
 - Always provide the complete URL being analyzed
 
@@ -16,7 +16,7 @@ When asked to analyze pages for accessibility issues, you MUST:
 
 When asked to remediate or fix accessibility issues, you MUST:
 
-- First use `mcp_axe-mcp-serve_remediate` tool for EACH violation found
+- First use `mcp_axe-mcp-server_remediate` tool for EACH violation found
 - Provide the exact HTML element, rule ID, and issue description
 - Review the remediation guidance before making any code changes
 - Apply fixes based on the remediate tool's recommendations
@@ -30,16 +30,16 @@ When asked to remediate or fix accessibility issues, you MUST:
 
 After applying fixes, you MUST:
 
-- Re-run `mcp_axe-mcp-serve_analyze` to verify all issues are resolved
+- Re-run `mcp_axe-mcp-server_analyze` to verify all issues are resolved
 - Confirm zero violations before considering the task complete
 
 ## Required Workflow Example:
 
 ```
-1. mcp_axe-mcp-serve_analyze → Find violations
-2. For each violation: mcp_axe-mcp-serve_remediate → Get fix guidance
+1. mcp_axe-mcp-server_analyze → Find violations
+2. For each violation: mcp_axe-mcp-server_remediate → Get fix guidance
 3. Apply recommended fixes to code
-4. mcp_axe-mcp-serve_analyze → Verify fixes
+4. mcp_axe-mcp-server_analyze → Verify fixes
 ```
 
 ## Enforcement

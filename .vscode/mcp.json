@@ -1,0 +1,30 @@
+{
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "axe-api-key",
+      "description": "axe MCP Server API Key",
+      "password": true
+    }
+  ],
+  "servers": {
+    "axe-mcp-server": {
+      "command": "docker",
+      "args": [
+        "run",
+        "--add-host=host.docker.internal:host-gateway",
+        "-i",
+        "--rm",
+        "-e",
+        "AXE_SERVER_URL",
+        "-e",
+        "AXE_API_KEY",
+        "dequesystems/axe-mcp-server:v1.2.0-rc.cd2af31c"
+      ],
+      "env": {
+        "AXE_API_KEY": "${input:axe-api-key}",
+        "AXE_SERVER_URL": "https://axe.dequelabs.com"
+      }
+    }
+  }
+}
