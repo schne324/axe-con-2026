@@ -47,3 +47,16 @@ After applying fixes, you MUST:
 - NEVER skip the remediate tool when fixing accessibility issues
 - ALWAYS use both analyze and remediate tools as specified
 - This workflow ensures proper accessibility best practices and compliance
+
+## Trip card image alt text
+
+Images sourced from `public/trips/*.svg` are destination scenes with overlaid **service icons** (express, sleeper, dining, etc.) that visually communicate which train services are included with the trip or deal. The destination, route, fare, and dates are already rendered as adjacent card text — they must NOT be repeated in the alt.
+
+When generating alt text for an `<img>` whose `src` resolves to a `public/trips/*.svg` file, you MUST:
+
+1. Open the corresponding SVG file and locate the `<!-- Service icon: ... -->` comments. Each comment identifies one service depicted in the image.
+2. Write alt text describing ONLY those service icons, in plain language. Examples:
+   - SVG contains express and dining icons → `alt="Express service and dining service"`
+   - SVG contains sleeper and dining icons → `alt="Sleeper service and dining service"`
+   - SVG contains only the dining icon → `alt="Dining service"`
+3. Do NOT include the destination name, route, scenery, time of day, weather, or any other detail that does not appear as a service icon in the SVG.

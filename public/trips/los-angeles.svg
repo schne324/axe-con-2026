@@ -60,4 +60,25 @@
       <circle cx="4" cy="2" r="2" fill="#3a2e1e"/>
     </g>
   </g>
+  <!-- Service icon: dining (fork + knife) -->
+  <g transform="translate(360, 140)">
+    <circle r="26" fill="#ffffff" opacity="0.95"/>
+    <circle r="23" fill="#1a2e4a"/>
+    <g fill="#ffffff">
+      <!-- fork: 4 tines, base, handle -->
+      <g transform="translate(-6, 0)">
+        <rect x="-4.7" y="-12.8" width="1.6" height="6" rx="0.7"/>
+        <rect x="-1.9" y="-12.8" width="1.6" height="6" rx="0.7"/>
+        <rect x="0.9" y="-12.8" width="1.6" height="6" rx="0.7"/>
+        <rect x="3.7" y="-12.8" width="1.6" height="6" rx="0.7"/>
+        <rect x="-4.7" y="-6.8" width="10.1" height="2.2" rx="0.5"/>
+        <rect x="-0.9" y="-4.7" width="1.9" height="15.5" rx="0.8"/>
+      </g>
+      <!-- knife: blade + handle -->
+      <g transform="translate(7.4, 0)">
+        <rect x="-1.5" y="-12.8" width="3" height="9.4" rx="1.2"/>
+        <rect x="-0.9" y="-3.4" width="1.9" height="14.2" rx="0.8"/>
+      </g>
+    </g>
+  </g>
 </svg>
